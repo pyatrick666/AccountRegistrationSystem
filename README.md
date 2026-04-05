@@ -56,20 +56,6 @@ It demonstrates database connectivity, form validation, and user authentication 
    
 ---
 
-## Folder Structure
-
-AccountRegistrationSystem/
-│
-├── css/
-├── js/
-├── php/
-├── database/
-│ └── database.sql
-│
-└── index.php
-
----
-
 ## Database Structure
 
 Example Table:
