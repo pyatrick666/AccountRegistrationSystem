@@ -1,100 +1,68 @@
 # Account Registration System
 
+A small **C# console application** demonstrating object-oriented programming, account registration, login flow, file handling, and basic password validation.
+
 ## Overview
 
-This project is a **web-based Account Registration System** that allows users to create accounts, store personal details, and manage login credentials.
+The program presents a menu that lets a user register an account, attempt to log in, or exit. Account details are stored in individual text files, and a separate password validator checks a minimum password length and compares passwords against text-file contents.
 
-It demonstrates database connectivity, form validation, and user authentication features.
-
----
+This is an educational project, not a production authentication system.
 
 ## Features
 
-- User Registration
-- Login Authentication
-- Data Validation
-- Secure Password Handling
-- Database Integration
-- User Information Storage
+- Console menu for registration, login, and exit
+- Account registration with duplicate-username checks
+- Login by comparing entered credentials with the saved account file
+- Password length validation (minimum 10 characters)
+- Basic checks against passwords found in local text files
+- Separate classes for account management and password validation
 
----
+## Technology
 
-## Technologies Used
+- C#
+- .NET Framework 4.7.2
+- Visual Studio solution and project files
+- File I/O using System.IO
 
-- HTML
-- CSS
-- JavaScript
-- PHP / Java / Python (update based on your repo)
-- MySQL Database
+## Project structure
 
----
+```text
+AccountRegistrationSystem/
+├── AccountSystemOOP.sln
+├── AccountSystemOOP.csproj
+├── Program.cs
+├── AccountManager.cs
+├── PasswordValidator.cs
+├── account.cs
+├── App.config
+└── common passwords.txt
+```
 
-## System Modules
+## Run locally
 
-1. Registration Module  
-   - Collect user details  
-   - Validate inputs  
-   - Store user data  
+1. Install Visual Studio with .NET Framework 4.7.2 developer tools.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/pyatrick666/AccountRegistrationSystem.git
+   cd AccountRegistrationSystem
+   ```
+3. Open AccountSystemOOP.sln in Visual Studio.
+4. Review the account storage directory configured in AccountManager.cs and PasswordValidator.cs; update the hard-coded local Windows path for your machine.
+5. Build and run the project.
 
-2. Login Module  
-   - Authenticate users  
-   - Verify credentials  
+## Security limitations
 
-3. Database Module  
-   - Store user records  
-   - Retrieve user information  
+This project is for learning and should **not** be used to store real accounts or passwords.
 
----
+- Passwords are currently written to text files in plain text.
+- Login compares the entered password directly with the stored text.
+- The account storage path is hard-coded to a local Windows directory.
+- The password checks are basic and do not replace a secure password-hashing and authentication design.
 
-## Installation
-
-1. Install XAMPP / WAMP.
-2. Start Apache and MySQL.
-3. Import database file: database.sql 
-4. Place project folder inside: htdocs/
-5. Open browser: http://localhost/AccountRegistrationSystem
-   
----
-
-## Database Structure
-
-Example Table:
-Users
-id
-username
-email
-password
-created_at
-
-
----
-
-## Security Features
-
-- Input Validation
-- Password Encryption
-- Authentication System
-
----
-
-## Future Enhancements
-
-- Email verification
-- Password reset system
-- Admin dashboard
-- Multi-user roles
-
----
+A future version should use a configurable data directory, salted password hashing (for example, a suitable password-hashing library), safer input handling, and automated tests.
 
 ## Author
 
-**Patrick**
+**Pratik Poudel**
 
-GitHub: https://github.com/pyatrick666
-
----
-
-## License
-
-This project is licensed under the **MIT License**.
-
+[GitHub profile](https://github.com/pyatrick666) · [Professional portfolio](https://pyatrick666.github.io/Professional-Portfolio/)
